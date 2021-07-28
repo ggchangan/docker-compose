@@ -1,0 +1,13 @@
+version: '2'
+services:
+  clickhouse-server:
+    image: "yandex/clickhouse-server:${CH_VERSION}"
+    environment:
+      - CH_VERSION=latest
+    volumes: 
+      - $HOME/clickhouse_database:/var/lib/clickhouse 
+
+  #clickhouse-client:
+  #  image: "yandex/clickhouse-client:${CH_VERSION}"
+  #  environment:
+  #    - CH_VERSION=latest
